@@ -1,18 +1,55 @@
-<template id="article-template">
+<template id="article-template" itemscope>
+	<nav itemprop="breadcrumb" itemtype="http://schema.org/BreadcrumbList" itemscope>
+		<span itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope>
+			<span itemprop="item">
+				<a href="/" itemprop="url">
+					<span itemprop="name">Home</span>
+				</a>
+				<meta itemprop="position" content="1" />
+			</span>
+		</span>
+		<span itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope>
+			<span itemprop="item">
+				<a href="" itemprop="url">
+					<span itemprop="name"></span>
+				</a>
+				<meta itemprop="position" content="2" />
+			</span>
+		</span>
+		<span itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope>
+			<span itemprop="item">
+				<a href="" itemprop="url">
+					<span itemprop="name"></span>
+				</a>
+				<meta itemprop="position" content="3" />
+			</span>
+		</span>
+	</nav>
 	<article itemscope="" itemtype="https://schema.org/Article" itemprop="mainEntityOfPage">
 		<header>
-		<meta itemprop="dateModified" content="">
-		<h2 itemprop="headline"></h2>
-		<b>By&nbsp;<span itemprop="author"></span></b>
-		<br>
-		<i>on&nbsp;<time itemprop="datePublished"></time></i>
-		<br>
-		<h4>Published by&nbsp;<span itemscope="" itemprop="publisher" itemtype="https://schema.org/Organization">
-			<a itemprop="url"><span itemprop="name"></span></a>
-			<meta itemprop="logo"></span>
-		</h4>
-		<hr>
+			<meta itemprop="dateModified" content="">
+			<h2>
+				<span itemprop="articleSection"></span>
+				<span>&raquo;</span>
+				<span itemprop="headline"></span>
+			</h2>
+			<div itemprop="keywords"></div>
+			<b>By&nbsp;<span itemprop="author"></span></b>
+			<br>
+			<i>on&nbsp;<time itemprop="datePublished"></time></i>
+			<br>
+			<h4>Published by&nbsp;<span itemscope="" itemprop="publisher" itemtype="https://schema.org/Organization">
+				<a itemprop="url"><span itemprop="name"></span></a>
+				<meta itemprop="logo"></span>
+			</h4>
+			<hr>
 		</header>
 		<div itemprop="articleBody"></div>
+		<footer>
+			<button type="button" data-share="facebook">Share on Facebook</button>
+			<button type="button" data-share="twitter">Share on Twitter</button>
+			<button type="button" data-share="g+">Share on Google+</button>
+		</footer>
 		</article>
 </template>
+
