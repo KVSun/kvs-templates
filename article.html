@@ -49,7 +49,14 @@
 			<button type="button" data-share="facebook">Share on Facebook</button>
 			<button type="button" data-share="twitter">Share on Twitter</button>
 			<button type="button" data-share="g+">Share on Google+</button>
+			<form name="comments" action="/api.php" method="POST">
+				<fieldset>
+					<legend>Comment</legend>
+					<textarea name="comments[text]" required></textarea>
+				</fieldset>
+				<button type="submit">Post comment</buton>
+			</form>
+			<hr/>
 		</footer>
 		</article>
 </template>
-
